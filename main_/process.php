@@ -21,12 +21,11 @@ foreach($n as $userFind)
 				    $password = $userFind['password'];
 				}
 if($username == $roll_no && $password == $pass){ 
-					echo "Login successful.";
+					header('location:upload.html');
 				}
 			else{
 					
-				echo "Login failed.Check your roll number and password.";
+				header('location:login.html');
 				}
 				
 			?>
-
