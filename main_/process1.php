@@ -19,6 +19,7 @@
    );
   
    $collection->insert($document);
-   echo "registration zalel aahe";
+   header('location:login.html');
+
 
 ?>
