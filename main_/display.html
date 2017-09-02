@@ -1,0 +1,14 @@
+<?php
+error_reporting(0);
+$data = file_get_contents("http://localhost/display.php");
+$regex = $_POST["search"];    
+ 
+ if (isset($_POST["submit"])) {
+   if (preg_match('/' . preg_quote($regex). '/i', $data)) {
+   	echo $regex;
+}  
+   else {
+    echo "not found";
+}
+}
+ ?>

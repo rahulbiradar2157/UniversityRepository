@@ -1,0 +1,190 @@
+ #universityLogo{
+    height: 150px;
+    width: auto;
+}
+
+    #headerBox{
+    border-radius: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+    
+    #pageHeading{
+        font-family: 'Calibri';
+        font-size: 35px;
+        text-align: center;
+        color: #056877;
+    }
+
+    #subHeading{
+        font-family: 'Arial';
+        font-size: 32px;
+        text-align: center;
+        color: #4a6ab2;
+    }
+
+    #subHeadingSmall{
+        font-family: 'Arial';
+        font-size: 15px;
+        text-align: center;
+        color: #006666;
+    }
+
+    #logoBox{
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+
+    #headerBox{
+        margin-top: 15px;
+    }
+
+    #header-text{
+        position: relative;
+        clear: both;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+
+body {
+background: url('images/img.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	color:#fff;
+  	background-color:#333;
+  	font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
+}
+.corners { 
+    /*background: #FFF;
+    height: 500px;
+    max-width: 400px;
+    line-height:25px;
+    position: relative;
+    left:50px;*/
+	width: 80%;
+    font-family:arial; font-size:14px; font-weight:bold; padding:10px; padding-top:40px;
+    -webkit-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+       -moz-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+            box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+}
+
+/* Corner Effect */
+.corners:after,
+.corners:before {
+    background: #638c8a;
+    content: '';
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    width: 100px;
+    -webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+       -moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+            box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+}
+.corners:after {
+    left: -50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.corners:before {
+    right: -50px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+
+#departments {
+    background: #74AFAD;
+    height: 500px;
+    margin-top: 50px ;
+    max-width: 400px;
+    line-height:25px;
+    position: relative;
+    width: 80%;
+    font-family:arial; font-size:14px; font-weight:bold; padding:10px; padding-top:40px;
+    -webkit-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+       -moz-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+            box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+}
+
+
+.login-heading {
+  font: 1.8em/48px "Tenor Sans", sans-serif;
+  color: white;
+}
+
+.input-txt {
+  width: 40%;
+ 
+  padding: 20px 10px;
+  border: none;
+  font-size: 1em;
+  color:#000000 ;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.login-footer {
+  margin: 10px 0;
+  overlow: hidden;
+  float: left;
+  width: 100%;
+}
+
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: white;
+  color: #5D92BA;
+}
+
+.btn--right {
+  float: left;
+}
+
+.icon {
+  display: inline-block;
+}
+
+.icon--min {
+  font-size: .9em;
+}
+
+.lnk {
+  font-size: .8em;
+  line-height: 3em;
+  color: red;
+  text-decoration: none;
+}
+
+
+.noBullets{
+    	list-style:none;
+		padding:auto;
+	}
+    
+	#last-footer h5{
+		text-align:center;
+	}
+	.footlinks li a{
+	text-align:center;
+	margin-left:5px ;
+	}

@@ -1,55 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<script src="../js/jquery-3.1.1"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<html lang="en" >
-    <head>
-        <meta charset="utf-8" />
-        <title>Upload to Repository</title>
-        <link href="upload.css" rel="stylesheet" type="text/css" />
-        <script src="upload.js"></script>
-    </head>
-    <body>
-    
-        <header>
-            <h2>Please select your file to upload.</h2>
-        </header>
-        <div class="container">
-            <div class="contr"><h2>Select the file and click Upload button</h2></div>
+<script src="../js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
 
-            <div class="upload_form_cont">
-                <form id="upload_form" enctype="multipart/form-data" method="post" action="upload.php">
-                    <div>
-                        <div><label for="image_file">Please select the file</label></div>
-                        <div><input type="file" name="image_file" id="image_file" onchange="fileSelected();" /></div>
-                    </div>
-                    <div>
-                        <input type="button" value="Upload" onclick="startUploading()" />
-                    </div>
-                    <div id="fileinfo">
-                        <div id="filename"></div>
-                        <div id="filesize"></div>
-                        <div id="filetype"></div>
-                        <div id="filedim"></div>
-                    </div>
-                    <div id="error">You should select valid image files only!</div>
-                    <div id="error2">An error occurred while uploading the file</div>
-                    <div id="abort">The upload has been canceled by the user or the browser dropped the connection</div>
-                    <div id="warnsize">Your file is very big. We can't accept it. Please select more small file</div>
+<style type="text/css">
+   
+</style>
 
-                    <div id="progress_info">
-                        <div id="progress"></div>
-                        <div id="progress_percent">&nbsp;</div>
-                        <div class="clear_both"></div>
-                        <div>
-                            <div id="speed">&nbsp;</div>
-                            <div id="remaining">&nbsp;</div>
-                            <div id="b_transfered">&nbsp;</div>
-                            <div class="clear_both"></div>
-                        </div>
-                        <div id="upload_response"></div>
-                    </div>
-                </form>
-
-                <img id="preview" />
-            </div>
+<div class="container">
+    <div class="jumbotron" id="headerBox">
+        <div class="row">
+            <div class="col-sm-3" id="logoBox"><center><img id="universityLogo" src="../img/Batu_logo4.png"></center></div>
+            <div class="col-sm-9">
+            <div id="pageHeading">Dr Babasaheb Ambedkar Technological University,Lonere</div>
+            <div id="subHeadingSmall">(Autonoumous)</div>
+            <div id="subHeading">Institutional Repository for DBATU Lonere</div>
         </div>
-    </body>
-</html>
+        </div>
+    </div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://dbatuonline.com/">University Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="logindex.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+       <li><a href="display.php"><span class="glyphicon glyphicon-download">Archive</a></li>
+        <li class="active"><a href="upload.html"><span class="glyphicon glyphicon-upload">Upload</a></li>
+          
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.dbatuonline.com/contact.php"><span class="glyphicon glyphicon-user"></span> Contact us </a></li>
+      
+	  <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="header-text">
+            <marquee>
+                <FONT SIZE="3" COLOR="#ffffff">
+                    <B>Welcome to Institutional Repository System of Dr. Babasaheb Ambedkar Technological University, Lonere</B>
+                </FONT>
+            </marquee>
+</div>
+<body>
+ <div class="container">
+  <div class="login">
+   <div style="margin-left: 30%">
+<form name="newad" action="upload.php" method="POST" enctype="multipart/form-data" class="input-text">
+	<input type="text" name="title" placeholder="Enter Title" required="required" class="btn" />
+	</br>
+	</br>
+	<input type="text" name="author" placeholder="Enter Author name" required="required" class="btn" />
+	</br>
+	</br>
+	<input type="text" name="uploader" placeholder="Enter your name" required="required" class="btn" />
+<br/>
+<label for="file" >Upload file</label>
+<input type="file" name="file" id="file" class="input-txt />
+ <div class="login-footer">
+<input type="submit" class='btn' name="submit" value="upload" />  
+</div>
+</form>
+ </div>
+ </div>
+</div>
+<br>
+<div class="container">
+
+ <footer class="text-muted well" id="last-footer">
+		<section>
+		<div class="row" style="font-size:11px;">
+		<div class="container">
+		<h3 class="subhead" style="text-align:center;">All We Need Is Your Support</h3>
+		   <div class="col-md-9">
+        <div class="row" >
+			<div class="col-md-3">
+			<div class="row footlinks">
+			<div class="col-xs-12">
+			<ul class="noBullets">
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=3">Vice-Chancellor's Page</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=4">B. Tech Admissions</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://admissions.dbatuonline.com/">Ph. D/M.Tech Admissions</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=10">Training & Placement</a></li>
+			</ul>
+			</div>
+			</div>
+			</div>
+			<div class="col-md-3">
+			<div class="row footlinks">
+			<div class="col-xs-12">
+			
+			<ul class="noBullets">
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/1">Degree Verification</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/">Citizen Charter</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://dbatuonline.com/admin/uploads/1392461161.pdf">Right to Information</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=18">TEQIP</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://dbatuonline.com/admin/uploads/1470393854.pdf">Ordinances</a></li>
+			
+			</ul>
+			</div>
+			</div>
+			</div>
+			<div class="col-md-3">
+			<div class="row footlinks">
+			<div class="col-xs-12">
+			
+			<ul class="noBullets">
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=19">Convocation</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=20">Tender Notice</li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/admin/uploads/1434626191.pdf">Academic Calendar</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.cec.nic.in/">CEC</li>
+			<li><i class="fa fa-angle-right"></i><a href="http://dbatuonline.com/admin/uploads/1470393888.pdf">Statutes</li>
+			
+			
+</ul>
+			</div>
+			</div>
+			</div>
+			<div class="col-md-3">
+			<div class="row footlinks">
+			<div class="col-xs-12">
+			<ul class="noBullets">
+			<li><i class="fa fa-angle-right"></i><a href="http://www.sakshat.ac.in/">SAKSHAT</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://www.dbatuonline.com/page.php?quick_id=28">Syllabi, Rules & Regulations</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://dbatuonline.com/iope/">IOPE</a></li>
+			<li><i class="fa fa-angle-right"></i><a href="http://dbatuonline.com/admin/uploads/1470393933.pdf">First Rules and Regulations</a></li>
+			
+			</ul>
+			</div>
+			</div>
+			</div>
+			<hr/>			
+        </div><!--/.row inner--> 
+		</div>
+		
+    
+		<footer>	<div class="row">
+			<div class="container text-center">
+				<h5>All Rights Reserved © 2017.</h5>
+			</div>
+			</div></footer>
+			 </div><!--/.container--> 
+			 </div><!--/.row outer--> 
+		</section>
+				</footer>				
+	
+</div>	
+    <script src="js/index.js"></script>
+
+
+</body>
